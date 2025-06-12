@@ -136,37 +136,23 @@
 				    if (scrollBottom > sectionTop + 50) {
 				        $skillFills.each(function () {
 				            var $this = $(this);
-				            var targetWidth = $this.attr('data-width'); // Use 'data-width' attribute
-				            $this.css('width', targetWidth);
+				            var targetWidth = $this.attr('data-width');
+				
+				            // Reset width first, then animate after a short delay
+				            $this.css('width', '0');
+				            setTimeout(function () {
+				                $this.css('width', targetWidth);
+				            }, 100);
 				        });
+				
 				        skillsAnimated = true;
 				        $(window).off('scroll', animateSkills);
 				    }
 				}
 				
 				$(window).on('scroll', animateSkills);
+				$(window).trigger('scroll'); // trigger once on load in case already in view
 
-
-
-			// === Paste the skill animation code below everything ===
-			
-			document.addEventListener("DOMContentLoaded", function () {
-			  const skillsSection = document.getElementById("skills");
-			  const skillFills = document.querySelectorAll(".skill-fill");
-			
-			  function animateSkills() {
-			    const sectionPos = skillsSection.getBoundingClientRect().top;
-			    if (sectionPos < window.innerHeight) {
-			      skillFills.forEach(fill => {
-			        const width = fill.getAttribute('data-width');
-			        fill.style.width = width;
-			      });
-			      window.removeEventListener('scroll', animateSkills);
-			    }
-			  }
-			
-			  window.addEventListener("scroll", animateSkills);
-			});
 
 
 })(jQuery);
