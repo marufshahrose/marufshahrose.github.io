@@ -11,6 +11,35 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
+	
+		
+	
+		<script>
+	    // Animate skill bars when skills section scrolls into view
+	    document.addEventListener("DOMContentLoaded", function () {
+	        const skillsSection = document.getElementById("skills");
+	        const skillFills = document.querySelectorAll(".skill-fill");
+	
+	        function animateSkills() {
+	            const sectionPos = skillsSection.getBoundingClientRect().top;
+	            if (sectionPos < window.innerHeight) {
+	                skillFills.forEach(fill => {
+	                    const width = fill.style.width;
+	                    fill.style.width = '0';
+	                    setTimeout(() => {
+	                        fill.style.width = width;
+	                    }, 200);
+	                });
+	                window.removeEventListener('scroll', animateSkills);
+	            }
+	        }
+	
+	        window.addEventListener("scroll", animateSkills);
+	    });
+	</script>
+
+		
+	
 	<body class="is-preload">
 
 		<!-- Header -->
