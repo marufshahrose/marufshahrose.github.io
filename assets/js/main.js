@@ -120,7 +120,9 @@
 					visibleClass: 'header-visible'
 				});
 				
-					// Skill bar animation on scroll
+				
+				
+	// Skill bar animation on scroll
 				var $skillsSection = $('#skills');
 				var $skillFills = $('.skill-fill');
 				var animated = false;
@@ -145,6 +147,29 @@
 				}
 				
 				$(window).on('scroll', animateSkills);
+
+			// ... (your existing code above)
+
+			// === Paste the skill animation code below everything ===
+			
+			document.addEventListener("DOMContentLoaded", function () {
+			  const skillsSection = document.getElementById("skills");
+			  const skillFills = document.querySelectorAll(".skill-fill");
+			
+			  function animateSkills() {
+			    const sectionPos = skillsSection.getBoundingClientRect().top;
+			    if (sectionPos < window.innerHeight) {
+			      skillFills.forEach(fill => {
+			        const width = fill.getAttribute('data-width');
+			        fill.style.width = width;
+			      });
+			      window.removeEventListener('scroll', animateSkills);
+			    }
+			  }
+			
+			  window.addEventListener("scroll", animateSkills);
+			});
+
 
 
 })(jQuery);
