@@ -123,35 +123,39 @@
 				
 				
 				// Skill bar animation on scroll (jQuery version)
-				var $skillsSection = $('#skills');
-				var $skillFills = $('.skill-fill');
-				var skillsAnimated = false;
+				$(document).ready(function() {
+				    var $skillsSection = $('#skills');
+				    var $skillFills = $('.skill-fill');
+				    var skillsAnimated = false;
 				
-				function animateSkills() {
-				    if (skillsAnimated) return;
+				    function animateSkills() {
+				        if (skillsAnimated) return;
 				
-				    var sectionTop = $skillsSection.offset().top;
-				    var scrollBottom = $(window).scrollTop() + $(window).height();
+				        var sectionTop = $skillsSection.offset().top;
+				        var scrollBottom = $(window).scrollTop() + $(window).height();
 				
-				    if (scrollBottom > sectionTop + 50) {
-				        $skillFills.each(function () {
-				            var $this = $(this);
-				            var targetWidth = $this.attr('data-width');
+				        if (scrollBottom > sectionTop + 50) {
+				            $skillFills.each(function () {
+				                var $this = $(this);
+				                var targetWidth = $this.attr('data-width');
 				
-				            // Reset width first, then animate after a short delay
-				            $this.css('width', '0');
-				            setTimeout(function () {
-				                $this.css('width', targetWidth);
-				            }, 100);
-				        });
+				                $this.css('width', '0');
+				                setTimeout(function () {
+				                    $this.css('width', targetWidth);
+				                }, 100);
+				            });
 				
-				        skillsAnimated = true;
-				        $(window).off('scroll', animateSkills);
+				            skillsAnimated = true;
+				            $(window).off('scroll', animateSkills);
+				        }
 				    }
-				}
 				
-				$(window).on('scroll', animateSkills);
-				$(window).trigger('scroll'); // trigger once on load in case already in view
+				    $(window).on('scroll', animateSkills);
+				
+				    // Trigger once immediately after page loads (after a tiny delay to allow rendering)
+				    setTimeout(animateSkills, 100);
+				});
+
 
 
 
