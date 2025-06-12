@@ -122,40 +122,36 @@
 				
 				
 				
-				// Skill bar animation on scroll (jQuery version)
-				$(document).ready(function() {
-				    var $skillsSection = $('#skills');
-				    var $skillFills = $('.skill-fill');
-				    var skillsAnimated = false;
+				// Skill bar animation on scroll
+				document.addEventListener("DOMContentLoaded", function () {
+				  const skillsSection = document.getElementById("skills");
+				  const skillFills = document.querySelectorAll(".skill-fill");
 				
-				    function animateSkills() {
-				        if (skillsAnimated) return;
+				  function animateSkills() {
+				    const rect = skillsSection.getBoundingClientRect();
+				    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
 				
-				        var sectionTop = $skillsSection.offset().top;
-				        var scrollBottom = $(window).scrollTop() + $(window).height();
-				
-				        if (scrollBottom > sectionTop + 50) {
-				            $skillFills.each(function () {
-				                var $this = $(this);
-				                var targetWidth = $this.attr('data-width');
-				
-				                $this.css('width', '0');
-				                setTimeout(function () {
-				                    $this.css('width', targetWidth);
-				                }, 100);
-				            });
-				
-				            skillsAnimated = true;
-				            $(window).off('scroll', animateSkills);
-				        }
+				    if (rect.top < windowHeight && rect.bottom > 0) {
+				      // Skills section is visible, animate bars
+				      skillFills.forEach(fill => {
+				        const width = fill.getAttribute('data-width');
+				        fill.style.width = width;
+				      });
+				    } else {
+				      // Skills section out of view, reset bars
+				      skillFills.forEach(fill => {
+				        fill.style.width = '0';
+				      });
 				    }
+				  }
 				
-				    $(window).on('scroll', animateSkills);
+				  // Initial check on load in case section is already visible
+				  animateSkills();
 				
-				    // Trigger once immediately after page loads (after a tiny delay to allow rendering)
-				    setTimeout(animateSkills, 100);
+				  // Animate on scroll and resize events
+				  window.addEventListener("scroll", animateSkills);
+				  window.addEventListener("resize", animateSkills);
 				});
-
 
 
 
