@@ -2263,6 +2263,14 @@ input, select, textarea {
 			#main > section.four {
 				background-color: #e8edec;
 			}
+			#main > section.five {
+				background-color: #f3f7f6;
+			}
+			
+			#main > section.six {
+				background-color: #e0e6e5;
+			}
+
 			
 	/* Wide */
 
