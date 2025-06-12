@@ -2641,41 +2641,38 @@ input, select, textarea {
 		}
 			
 
-			#skills {
-			  max-width: 600px;
-			  margin: auto;
-			  padding: 2em;
-			  background: #f7f9f9;
-			  border-radius: 8px;
-			  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-			}
-			
-			.skill {
-			  margin-bottom: 1.5em;
-			}
-			
-			.skill-name {
-			  font-weight: 600;
-			  margin-bottom: 0.3em;
-			  font-size: 1.1em;
-			}
-			
-			.skill-bar {
-			  width: 100%;
-			  background-color: #ddd;
-			  border-radius: 25px;
-			  overflow: hidden;
-			  height: 20px;
-			}
-			
-			.skill-fill {
-			  height: 100%;
-			  width: 0;
-			  background: linear-gradient(90deg, #4caf50, #81c784);
-			  border-radius: 25px 0 0 25px;
-			  transition: width 2s ease-in-out;
-			}
+			/* === SKILLS SECTION === */
 
+				.skills-list {
+				  max-width: 800px;
+				  margin: 0 auto;
+				  padding: 2em;
+				}
+				
+				.skill {
+				  margin-bottom: 1.5em;
+				}
+				
+				.skill-label {
+				  font-weight: bold;
+				  margin-bottom: 0.5em;
+				}
+				
+				.skill-bar {
+				  width: 100%;
+				  background-color: #ddd;
+				  border-radius: 10px;
+				  overflow: hidden;
+				  height: 20px;
+				  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+				}
+				
+				.skill-fill {
+				  height: 100%;
+				  width: 0;
+				  background-color: #3cb371; /* Green bar color */
+				  transition: width 1.2s ease-in-out;
+				}
 
 
 	}
