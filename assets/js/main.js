@@ -119,5 +119,32 @@
 					target: $body,
 					visibleClass: 'header-visible'
 				});
+				
+					// Skill bar animation on scroll
+				var $skillsSection = $('#skills');
+				var $skillFills = $('.skill-fill');
+				var animated = false;
+				
+				function animateSkills() {
+				    if (animated) return;
+				
+				    var sectionPos = $skillsSection[0].getBoundingClientRect().top;
+				
+				    if (sectionPos < window.innerHeight) {
+				        $skillFills.each(function() {
+				            var $this = $(this);
+				            var width = $this.data('skill');
+				            $this.css('width', '0');
+				            setTimeout(function() {
+				                $this.css('width', width);
+				            }, 200);
+				        });
+				        animated = true;
+				        $(window).off('scroll', animateSkills);
+				    }
+				}
+				
+				$(window).on('scroll', animateSkills);
+
 
 })(jQuery);
