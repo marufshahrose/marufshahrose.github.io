@@ -122,33 +122,31 @@
 				
 				
 				
-	// Skill bar animation on scroll
+				// Skill bar animation on scroll (jQuery version)
 				var $skillsSection = $('#skills');
 				var $skillFills = $('.skill-fill');
-				var animated = false;
+				var skillsAnimated = false;
 				
 				function animateSkills() {
-				    if (animated) return;
+				    if (skillsAnimated) return;
 				
-				    var sectionPos = $skillsSection[0].getBoundingClientRect().top;
+				    var sectionTop = $skillsSection.offset().top;
+				    var scrollBottom = $(window).scrollTop() + $(window).height();
 				
-				    if (sectionPos < window.innerHeight) {
-				        $skillFills.each(function() {
+				    if (scrollBottom > sectionTop + 50) {
+				        $skillFills.each(function () {
 				            var $this = $(this);
-				            var width = $this.data('skill');
-				            $this.css('width', '0');
-				            setTimeout(function() {
-				                $this.css('width', width);
-				            }, 200);
+				            var targetWidth = $this.attr('data-width'); // Use 'data-width' attribute
+				            $this.css('width', targetWidth);
 				        });
-				        animated = true;
+				        skillsAnimated = true;
 				        $(window).off('scroll', animateSkills);
 				    }
 				}
 				
 				$(window).on('scroll', animateSkills);
 
-			// ... (your existing code above)
+
 
 			// === Paste the skill animation code below everything ===
 			
