@@ -2264,21 +2264,7 @@ input, select, textarea {
 				background-color: #e8edec;
 			}
 			
-			<style>
-			#main > section.four {
-				padding-top: 3em;
-				padding-bottom: 3em;
-				margin-top: 0;
-			}
-			#contact header h2 {
-				margin-bottom: 0.5em;
-			}
-			#contact p {
-				margin-top: 0.2em;
-			}
-			</style>
-
-/* Wide */
+	/* Wide */
 
 	@media screen and (min-width: 961px) and (max-width: 1880px) {
 
