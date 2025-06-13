@@ -92,6 +92,27 @@ input, select, textarea {
 		color: #888;
 	}
 
+		.job-title {
+		    font-size: 1.4em;       /* Largest - title */
+		    font-weight: bold;
+		    margin-bottom: 0.2em;
+		}
+		
+		.job-meta {
+		    font-size: 1.1em;       /* Slightly smaller - time and company */
+		    color: #666;
+		    display: block;
+		    margin-bottom: 0.4em;
+		}
+		
+		.job-description {
+		    font-size: 1em;         /* Standard paragraph size */
+		    line-height: 1.6;
+		    color: #444;
+		}
+
+
+
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;
