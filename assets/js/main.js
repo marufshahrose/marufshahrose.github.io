@@ -152,6 +152,9 @@
 				  window.addEventListener("scroll", animateSkills);
 				  window.addEventListener("resize", animateSkills);
 				});
+
+
+
 				var scrollTimeout;
 				$window.on('scroll', function() {
 				  // Clear any previous timeout
@@ -163,6 +166,14 @@
 				  }, 100);
 				});
 
+				$window.on('beforeunload', function() {
+				  window.scrollTo(0, 0);
+				});
+				
+				$window.on('load', function() {
+				  window.scrollTo(0, 0);
+				});
 
 
+	
 })(jQuery);
