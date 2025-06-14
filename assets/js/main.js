@@ -167,9 +167,12 @@
 				});
 
 								
-				$window.on('load', function() {
+				// Scroll to top on page reload
+				$window.on('beforeunload', function() {
+				  // Scroll to top immediately before unload, so reload starts at top
 				  window.scrollTo(0, 0);
 				});
+
 
 
 	
