@@ -166,13 +166,11 @@
 				  }, 100);
 				});
 
-								
-				// Scroll to top on page reload
-				$window.on('beforeunload', function() {
-				  // Scroll to top immediately before unload, so reload starts at top
+	
+				// Scroll to top page after reload			
+				$window.on('load', function() {
 				  window.scrollTo(0, 0);
 				});
-
 
 
 	
