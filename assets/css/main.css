@@ -2652,28 +2652,40 @@ input, select, textarea {
 				}
 				
 				.skill {
-				  margin-bottom: 1.5em;
+				  margin-bottom: 20px;
+				  max-width: 400px;
+				  font-family: Arial, sans-serif;
 				}
 				
-				.skill-label {
-				  font-weight: bold;
-				  margin-bottom: 0.5em;
+				.skill-name {
+				  margin-bottom: 6px;
+				  font-weight: 600;
 				}
 				
 				.skill-bar {
-				  width: 100%;
-				  background-color: #ddd;
-				  border-radius: 10px;
+				  background: #eee;
+				  border-radius: 25px;
 				  overflow: hidden;
-				  height: 20px;
-				  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+				  position: relative;
+				  height: 28px;
 				}
 				
 				.skill-fill {
 				  height: 100%;
 				  width: 0;
-				  background-color: #3cb371; /* Green bar color */
-				  transition: width 1.2s ease-in-out;
+				  color: white;
+				  font-weight: bold;
+				  display: flex;
+				  align-items: center;
+				  justify-content: flex-end; /* percentage aligned right */
+				  padding-right: 10px;
+				  border-radius: 25px;
+				
+				  /* Gradient background */
+				  background: linear-gradient(90deg, #6a11cb, #2575fc);
+				
+				  /* Animation */
+				  transition: width 1.5s ease-in-out;
 				}
 
 
