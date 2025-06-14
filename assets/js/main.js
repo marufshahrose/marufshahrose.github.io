@@ -136,17 +136,20 @@
 				      skillFills.forEach(fill => {
 				        const width = fill.getAttribute('data-width');
 				        fill.style.width = width;
+					fill.textContent = width; // show % inside the bar
 				      });
+					    
 				    } else {
 				      // Skills section out of view, reset bars
 				      skillFills.forEach(fill => {
 				        fill.style.width = '0';
+					fill.textContent = ''; // Optionally clear text
 				      });
 				    }
 				  }
 				
-				  // Initial check on load in case section is already visible
-				  animateSkills();
+				  
+				animateSkills();
 				
 				  // Animate on scroll and resize events
 				  window.addEventListener("scroll", animateSkills);
@@ -154,18 +157,19 @@
 				});
 
 
-
-				var scrollTimeout;
+					var scrollTimeout;
 				$window.on('scroll', function() {
 				  // Clear any previous timeout
 				  clearTimeout(scrollTimeout);
-				
+
+					
 				  // Remove all active-locked after user scrolls and stops for 100ms
 				  scrollTimeout = setTimeout(function() {
 				    $nav_a.removeClass('active-locked');
 				  }, 100);
 				});
 
+	
 	
 				// Scroll to top on page reload
 				$window.on('beforeunload', function() {
