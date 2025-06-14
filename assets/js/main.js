@@ -166,10 +166,7 @@
 				  }, 100);
 				});
 
-				$window.on('beforeunload', function() {
-				  window.scrollTo(0, 0);
-				});
-				
+								
 				$window.on('load', function() {
 				  window.scrollTo(0, 0);
 				});
