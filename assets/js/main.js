@@ -152,6 +152,16 @@
 				  window.addEventListener("scroll", animateSkills);
 				  window.addEventListener("resize", animateSkills);
 				});
+				var scrollTimeout;
+				$window.on('scroll', function() {
+				  // Clear any previous timeout
+				  clearTimeout(scrollTimeout);
+				
+				  // Remove all active-locked after user scrolls and stops for 100ms
+				  scrollTimeout = setTimeout(function() {
+				    $nav_a.removeClass('active-locked');
+				  }, 100);
+				});
 
 
 
