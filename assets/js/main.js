@@ -132,29 +132,26 @@
 				    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
 				
 				    if (rect.top < windowHeight && rect.bottom > 0) {
-				      // Skills section is visible, animate bars
+				      // Animate bars
 				      skillFills.forEach(fill => {
 				        const width = fill.getAttribute('data-width');
 				        fill.style.width = width;
-					fill.textContent = width; // show % inside the bar
+				        fill.textContent = width;
 				      });
-					    
 				    } else {
-				      // Skills section out of view, reset bars
+				      // Reset bars
 				      skillFills.forEach(fill => {
 				        fill.style.width = '0';
-					fill.textContent = ''; // Optionally clear text
+				        fill.textContent = '';
 				      });
 				    }
 				  }
 				
-				  
-				animateSkills();
-				
-				  // Animate on scroll and resize events
+				  animateSkills();
 				  window.addEventListener("scroll", animateSkills);
 				  window.addEventListener("resize", animateSkills);
 				});
+
 
 
 					var scrollTimeout;
