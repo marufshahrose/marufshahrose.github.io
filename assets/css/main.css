@@ -2315,7 +2315,7 @@ input, select, textarea {
 			}
 
 			#main section.cover {
-				padding: 5em 0;
+				padding: 4em 0;
 			}
 
 	}
@@ -2577,11 +2577,11 @@ input, select, textarea {
 			}
 
 				#main > section {
-					padding: 3em 0;
+					padding: 2em 0;
 				}
 
 				#main section.cover {
-					padding: 4em 0;
+					padding: 3em 0;
 				}
 
 	}
@@ -2676,6 +2676,11 @@ input, select, textarea {
 				  transition: width 1.2s ease-in-out;
 				}
 
+
+
+				#experience {
+				  background-color: #e5eae9; /* change this to your preferred color */
+				}
 
 
 	}
