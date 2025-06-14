@@ -2668,23 +2668,22 @@ input, select, textarea {
 				  overflow: hidden;
 				  position: relative;
 				  height: 28px;
+				  margin-bottom: 15px;
 				}
 				
 				.skill-fill {
 				  height: 100%;
-				  width: 0;
+				  width: 0; /* start hidden, animated later */
 				  color: white;
 				  font-weight: bold;
 				  display: flex;
 				  align-items: center;
-				  justify-content: flex-end; /* percentage aligned right */
+				  justify-content: flex-end;
 				  padding-right: 10px;
 				  border-radius: 25px;
 				
-				  /* Gradient background */
+				  /* Gradient fill */
 				  background: linear-gradient(90deg, #6a11cb, #2575fc);
-				
-				  /* Animation */
 				  transition: width 1.5s ease-in-out;
 				}
 
