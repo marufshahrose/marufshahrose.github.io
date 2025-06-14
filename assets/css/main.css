@@ -2676,7 +2676,7 @@ input, select, textarea {
 				  text-align: right;
 				  padding-right: 10px;
 				  border-radius: 999px;
-				  background: linear-gradient(to right, #7add19, #02cf4b); /* You can customize this gradient */
+				  background: linear-gradient(to right, #07dfd8, #0a7de8); /* You can customize this gradient */
 				  transition: width 2s ease;
 				  display: flex;
 				  align-items: center;
