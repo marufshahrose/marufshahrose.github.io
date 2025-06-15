@@ -2688,7 +2688,7 @@ input, select, textarea {
 
 			/* Resume Button Container Styling */
 			.resume-button-container {
-			    margin-bottom: 25px;
+			    margin-bottom: 50px;
 			    text-align: center;
 			    width: 100%;
 			}
@@ -2698,7 +2698,7 @@ input, select, textarea {
 			    display: inline-block;
 			    background-color: #2c3e50; /* Original dark color */
 			    color: white !important; /* Force white text */
-			    padding: 5px 10px;
+			    padding: 6px 6px;
 			    margin: 5px 0;
 			    border-radius: 8px;
 			    text-decoration: none;
