@@ -182,4 +182,35 @@
 
 
 	
+					// Mobile navigation toggle
+				var $headerToggle = $('#headerToggle');
+				var $header = $('#header');
+				
+				// Add nav toggle button for mobile
+				$('<button class="nav-toggle" aria-label="toggle navigation"><span class="hamburger"></span></button>')
+				    .prependTo($header)
+				    .on('click', function() {
+				        $headerToggle.find('.toggle').trigger('click');
+				    });
+				
+				// Update panel settings to include our toggle
+				$header.panel({
+				    delay: 500,
+				    hideOnClick: true,
+				    hideOnSwipe: true,
+				    resetScroll: true,
+				    resetForms: true,
+				    side: 'left',
+				    target: $body,
+				    visibleClass: 'header-visible',
+				    onOpen: function() {
+				        $('.nav-toggle').addClass('active');
+				    },
+				    onClose: function() {
+				        $('.nav-toggle').removeClass('active');
+				    }
+				});
+
+
+	
 })(jQuery);
