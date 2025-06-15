@@ -178,7 +178,7 @@ input, select, textarea {
 	}
 
 		a:hover {
-			color: #E27689;
+			color: #3e8e41;
 			border-bottom-color: rgba(255, 255, 255, 0);
 		}
 
@@ -1969,7 +1969,7 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #1f8f25;
+			background-color: #3e8e41;
 		}
 
 		input[type="button"]:active,
@@ -2686,24 +2686,34 @@ input, select, textarea {
 
 
 
-				/* View Resume Button */
-				.view-resume-btn {
-				    display: block;
-				    width: auto;
-				    max-width: 150px;
-				    margin: 15px auto;
-				    padding: 8px 15px;
-				    background-color: #4CAF50;
-				    color: white !important;
+				/* Resume Button Container Styling */
+				.resume-button-container {
+				    margin-bottom: 25px; /* Adds space between button and social icons */
 				    text-align: center;
+				    width: 100%;
+				}
+				
+				/* View Resume Button Styling */
+				.view-resume-btn {
+				    display: inline-block;
+				    padding: 8px 20px;
+				    background-color: #87b4a1; /* Dark green */
+				    color: white;
 				    text-decoration: none;
 				    border-radius: 4px;
 				    font-size: 0.85em;
 				    transition: all 0.3s ease;
+				    margin: 0 auto; /* Centers the button */
 				}
 				
 				.view-resume-btn:hover {
-				    background-color: #3e8e41;
+				    background-color: #3e8e41; /* Slightly darker green on hover */
+				    transform: translateY(-1px);
+				}
+				
+				/* Adjust social icons container if needed */
+				.bottom .icons {
+				    margin-top: 15px; /* Additional space above social icons */
 				}
 
 
