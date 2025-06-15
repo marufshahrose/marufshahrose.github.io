@@ -174,5 +174,12 @@
 				  window.scrollTo(0, 0);
 				});
 
+
+				// Toggle navigation
+				document.querySelector('.nav-toggle').addEventListener('click', function() {
+				    document.querySelector('nav').classList.toggle('active');
+				});
+
+
 	
 })(jQuery);
