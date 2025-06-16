@@ -1,8 +1,3 @@
-/*
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 (function($) {
 
@@ -168,13 +163,7 @@
 
 	
 	
-				// Scroll to top on page reload
-				$window.on('beforeunload', function() {
-				  // Scroll to top immediately before unload, so reload starts at top
-				  window.scrollTo(0, 0);
-				});
-
-
+			
 				// Toggle navigation
 				document.querySelector('.nav-toggle').addEventListener('click', function() {
 				    document.querySelector('nav').classList.toggle('active');
