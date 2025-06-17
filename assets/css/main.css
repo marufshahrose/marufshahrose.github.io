@@ -2711,7 +2711,22 @@ input, select, textarea {
 			    transform: translateY(-1px); /* Slight lift effect */
 			    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow */
 			}
+
+
 				
+
+				/* Hire Me List style*/
+				.contact-links li {
+				  list-style: none;
+				  margin: 8px 0;
+				}
+				
+				.contact-links i {
+				  margin-right: 8px;
+				  color: #555;
+				}
+
+
 								
 
 
