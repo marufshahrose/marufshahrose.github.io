@@ -45,6 +45,7 @@ Feel free to reach out for collaboration, freelance, or feedback:
 
 📄 License
 ----------
-This project is open-source under the MIT License.
+This project is open-source under the Creative Commons Attribution 3.0 License.
 
 > Designed and built with passion by Maruf Shaharuj.
+"""
